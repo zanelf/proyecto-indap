@@ -1,20 +1,21 @@
 <?php
-$clave = "mane"; //la clave del usuario
-
-$conexion = pg_connect("host= "localhost" dbname= "INDAP" port= "5432"
-user= "postgres" password= $clave");
+include  "conexion.php";
 
 $rut = $_POST["rut"];
 
-$sql = "select nombre, id_indap from personal  where rut = .$rut.;";
+$sql = "select nombre, id_indap 
+from personal  
+where rut = $rut;";
 
-$insercion = pg_query($conexion,$sql);
+$insercion = pg_query($coneccion,$sql);
 
-var_dump($insercion);
-if (!$insercion) { //si no ha ocurrido un error
-    echo "<br><br>Miembro guardado con <b>éxito</b>"; 
+if (isset($insercion) == 0) { //verifica si el valor existe
+   $ro = pg_fetch_array($insercion);
+    echo $ro["nombre"];
 }else{
-    echo "no entro";
+    echo "por favor ingrese un valor valido <br><br>";
+
+    echo "<input type = 'button' value='volver a la pagina anterior'></input>";
 
 }
 
