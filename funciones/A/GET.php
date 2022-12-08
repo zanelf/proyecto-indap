@@ -9,11 +9,10 @@ where rut = $rut;";
 
 $insercion = pg_query($coneccion,$sql);
 
-
-
-
 if ($insercion) { //verifica si el valor existe
-   $ro = pg_fetch_array($insercion);
+   echo "entro";
+    
+    $ro = pg_fetch_array($insercion);
     echo $ro["nombre"];
 }else{
     echo "por favor ingrese un valor valido <br><br>";
