@@ -24,6 +24,6 @@ if($insercion){
 }else{
     echo "los valores que ah ingresado ya existen en la base de datos";
 }
-echo "<br><a href='../../index.html'>volver a la pagina anterior</a>";
+echo "<br><a href='../../index.html'>volver a la pagina de inicio</a>";
 
 ?>
