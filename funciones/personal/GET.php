@@ -3,7 +3,7 @@ include  "../../conexion.php";  //base para agarrar la conexion general
 
 $rut = $_POST["rut"];
 
-$sql = "select nombre
+$sql = "SELECT nombre
 from personal  
 where rut = $rut;";
 

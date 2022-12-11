@@ -36,9 +36,19 @@
 
                     <div class = "seccion">
                         <h2>personal</h2>
+                        <div class="peticion" >
+                            <h3>agregar personal</h3>
+                            <form action="funciones\personal\ADD.php" method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <br><br><br>
+                                <p>nombre:<br><input type="text" name="nombre" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
                         <div class="peticion">
                             <h3>preguntar por personal</h3>
-                            <form action="funciones\personal\GET.php " method="post">
+                            <form action="funciones\personal\GET.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
                                 <br><br><br>
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
@@ -46,16 +56,11 @@
                         </div>
                         <div class="peticion">
                             <h3>eliminar personal</h3>
-                            <form action="funciones\personal\DEL.php" method="post">
+                            <form action="funciones\personal\DEL.php" method="post" target="_blank">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
                                 <br><br><br>
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                             </form>
-                        </div>
-                        
-                        <div class="peticion">
-                            <h3>añadir nuevo usuario</h3>
-                            <a href="pagina\add_personal_page.html"> ir a la pagina de configuracion <br> de usuario </a>
                         </div>
                     </div>
 
