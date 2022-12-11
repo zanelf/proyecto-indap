@@ -5,7 +5,7 @@
 -- Dumped from database version 14.5
 -- Dumped by pg_dump version 14.2
 
--- Started on 2022-12-10 16:14:07
+-- Started on 2022-12-11 17:24:38
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -29,13 +29,24 @@ CREATE SCHEMA public;
 ALTER SCHEMA public OWNER TO postgres;
 
 --
--- TOC entry 3439 (class 0 OID 0)
+-- TOC entry 3443 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
 --
 
 COMMENT ON SCHEMA public IS 'standard public schema';
 
+
+--
+-- TOC entry 889 (class 1247 OID 34034)
+-- Name: tipoestablecimiento; Type: DOMAIN; Schema: public; Owner: postgres
+--
+
+CREATE DOMAIN public.tipoestablecimiento AS character varying NOT NULL
+	CONSTRAINT tipoestablecimiento_check CHECK ((((VALUE)::text = 'direccion regional'::text) OR ((VALUE)::text = 'agencia de area'::text) OR ((VALUE)::text = 'oficina'::text)));
+
+
+ALTER DOMAIN public.tipoestablecimiento OWNER TO postgres;
 
 SET default_tablespace = '';
 
@@ -104,7 +115,7 @@ CREATE TABLE public.establecimiento (
     "jefe de oficina" character varying NOT NULL,
     direccion character varying NOT NULL,
     telefono integer NOT NULL,
-    tipoestablecimiento character varying NOT NULL,
+    tipoestablecimiento public.tipoestablecimiento NOT NULL,
     correo_electronico character varying NOT NULL
 );
 
@@ -249,7 +260,7 @@ ALTER TABLE public.trabajador OWNER TO postgres;
 
 CREATE TABLE public.trabajador_de_oficina (
     rut bigint NOT NULL,
-    "rolE" character varying NOT NULL
+    rol_e character varying NOT NULL
 );
 
 
@@ -287,7 +298,7 @@ CREATE TABLE public.usuario (
 ALTER TABLE public.usuario OWNER TO postgres;
 
 --
--- TOC entry 3417 (class 0 OID 33703)
+-- TOC entry 3421 (class 0 OID 33703)
 -- Dependencies: 209
 -- Data for Name: beneficios; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -297,7 +308,7 @@ COPY public.beneficios (codigo, descripcion, ayuda) FROM stdin;
 
 
 --
--- TOC entry 3431 (class 0 OID 33981)
+-- TOC entry 3435 (class 0 OID 33981)
 -- Dependencies: 223
 -- Data for Name: consultores_de_riesgo_y_fomento; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -307,7 +318,7 @@ COPY public.consultores_de_riesgo_y_fomento (rut) FROM stdin;
 
 
 --
--- TOC entry 3428 (class 0 OID 33909)
+-- TOC entry 3432 (class 0 OID 33909)
 -- Dependencies: 220
 -- Data for Name: entrega; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -317,7 +328,7 @@ COPY public.entrega (codigo, codigobeneficio) FROM stdin;
 
 
 --
--- TOC entry 3433 (class 0 OID 34011)
+-- TOC entry 3437 (class 0 OID 34011)
 -- Dependencies: 225
 -- Data for Name: especialidades; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -327,17 +338,18 @@ COPY public.especialidades (id_especialidades, nombre, descripcion) FROM stdin;
 
 
 --
--- TOC entry 3418 (class 0 OID 33708)
+-- TOC entry 3422 (class 0 OID 33708)
 -- Dependencies: 210
 -- Data for Name: establecimiento; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.establecimiento (rol, "jefe de oficina", direccion, telefono, tipoestablecimiento, correo_electronico) FROM stdin;
+1001	ñuñez	V. kakariko	798546	oficina	kakaritoINdap@Hyr.com
 \.
 
 
 --
--- TOC entry 3419 (class 0 OID 33718)
+-- TOC entry 3423 (class 0 OID 33718)
 -- Dependencies: 211
 -- Data for Name: juridico; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -347,7 +359,7 @@ COPY public.juridico (id, telefono, region, pais, direccion, giro, razonsocial) 
 
 
 --
--- TOC entry 3420 (class 0 OID 33723)
+-- TOC entry 3424 (class 0 OID 33723)
 -- Dependencies: 212
 -- Data for Name: natural; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -357,18 +369,19 @@ COPY public."natural" (id, profesion, direccion, telefono, nacionalidad, "fecha 
 
 
 --
--- TOC entry 3421 (class 0 OID 33728)
+-- TOC entry 3425 (class 0 OID 33728)
 -- Dependencies: 213
 -- Data for Name: personal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.personal (nombre, rut) FROM stdin;
- veronica almendra	1562
+veronica almendra	1562
+bocchi manuel	1565
 \.
 
 
 --
--- TOC entry 3422 (class 0 OID 33733)
+-- TOC entry 3426 (class 0 OID 33733)
 -- Dependencies: 214
 -- Data for Name: postula; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -378,7 +391,7 @@ COPY public.postula (codigo, id, fecha) FROM stdin;
 
 
 --
--- TOC entry 3423 (class 0 OID 33738)
+-- TOC entry 3427 (class 0 OID 33738)
 -- Dependencies: 215
 -- Data for Name: programa; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -388,7 +401,7 @@ COPY public.programa (codigo, alcance, nombre, descripcion) FROM stdin;
 
 
 --
--- TOC entry 3427 (class 0 OID 33886)
+-- TOC entry 3431 (class 0 OID 33886)
 -- Dependencies: 219
 -- Data for Name: requiere; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -398,7 +411,7 @@ COPY public.requiere (identificador, codigo) FROM stdin;
 
 
 --
--- TOC entry 3424 (class 0 OID 33743)
+-- TOC entry 3428 (class 0 OID 33743)
 -- Dependencies: 216
 -- Data for Name: requisitos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -408,7 +421,7 @@ COPY public.requisitos (identificador, descripcion, codigoprograma) FROM stdin;
 
 
 --
--- TOC entry 3432 (class 0 OID 34004)
+-- TOC entry 3436 (class 0 OID 34004)
 -- Dependencies: 224
 -- Data for Name: tiene; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -418,27 +431,31 @@ COPY public.tiene (rut, id_especialidad) FROM stdin;
 
 
 --
--- TOC entry 3429 (class 0 OID 33931)
+-- TOC entry 3433 (class 0 OID 33931)
 -- Dependencies: 221
 -- Data for Name: trabajador; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.trabajador (rut, correo_electronico) FROM stdin;
+1562	valmendra@yahoo.com
+1565	bird@oks.yu
 \.
 
 
 --
--- TOC entry 3430 (class 0 OID 33951)
+-- TOC entry 3434 (class 0 OID 33951)
 -- Dependencies: 222
 -- Data for Name: trabajador_de_oficina; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.trabajador_de_oficina (rut, "rolE") FROM stdin;
+COPY public.trabajador_de_oficina (rut, rol_e) FROM stdin;
+1562	1001
+1565	1001
 \.
 
 
 --
--- TOC entry 3425 (class 0 OID 33758)
+-- TOC entry 3429 (class 0 OID 33758)
 -- Dependencies: 217
 -- Data for Name: trabajan; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -448,7 +465,7 @@ COPY public.trabajan (rut, codigo) FROM stdin;
 
 
 --
--- TOC entry 3426 (class 0 OID 33763)
+-- TOC entry 3430 (class 0 OID 33763)
 -- Dependencies: 218
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -458,7 +475,7 @@ COPY public.usuario (id, region, nacionalidad, comuna, sexo, "fecha de nacimient
 
 
 --
--- TOC entry 3228 (class 2606 OID 33771)
+-- TOC entry 3232 (class 2606 OID 33771)
 -- Name: beneficios beneficios_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -467,7 +484,7 @@ ALTER TABLE ONLY public.beneficios
 
 
 --
--- TOC entry 3256 (class 2606 OID 33985)
+-- TOC entry 3260 (class 2606 OID 33985)
 -- Name: consultores_de_riesgo_y_fomento consultores_de_riesgo_y_fomento_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -476,7 +493,7 @@ ALTER TABLE ONLY public.consultores_de_riesgo_y_fomento
 
 
 --
--- TOC entry 3250 (class 2606 OID 33915)
+-- TOC entry 3254 (class 2606 OID 33915)
 -- Name: entrega entrega_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -485,7 +502,7 @@ ALTER TABLE ONLY public.entrega
 
 
 --
--- TOC entry 3230 (class 2606 OID 33773)
+-- TOC entry 3234 (class 2606 OID 33773)
 -- Name: establecimiento establecimiento_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -494,7 +511,7 @@ ALTER TABLE ONLY public.establecimiento
 
 
 --
--- TOC entry 3232 (class 2606 OID 33777)
+-- TOC entry 3236 (class 2606 OID 33777)
 -- Name: juridico juridico_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -503,7 +520,7 @@ ALTER TABLE ONLY public.juridico
 
 
 --
--- TOC entry 3234 (class 2606 OID 33779)
+-- TOC entry 3238 (class 2606 OID 33779)
 -- Name: natural natural_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -512,16 +529,16 @@ ALTER TABLE ONLY public."natural"
 
 
 --
--- TOC entry 3236 (class 2606 OID 33781)
--- Name: personal personal_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 3240 (class 2606 OID 33781)
+-- Name: personal personal_pk_rut; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.personal
-    ADD CONSTRAINT personal_pk PRIMARY KEY (rut);
+    ADD CONSTRAINT personal_pk_rut PRIMARY KEY (rut);
 
 
 --
--- TOC entry 3260 (class 2606 OID 34017)
+-- TOC entry 3264 (class 2606 OID 34017)
 -- Name: especialidades pk_id; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -530,7 +547,7 @@ ALTER TABLE ONLY public.especialidades
 
 
 --
--- TOC entry 3238 (class 2606 OID 33783)
+-- TOC entry 3242 (class 2606 OID 33783)
 -- Name: postula postula_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -539,7 +556,7 @@ ALTER TABLE ONLY public.postula
 
 
 --
--- TOC entry 3240 (class 2606 OID 33785)
+-- TOC entry 3244 (class 2606 OID 33785)
 -- Name: programa programa_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -548,7 +565,7 @@ ALTER TABLE ONLY public.programa
 
 
 --
--- TOC entry 3248 (class 2606 OID 33892)
+-- TOC entry 3252 (class 2606 OID 33892)
 -- Name: requiere requiere_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -557,7 +574,7 @@ ALTER TABLE ONLY public.requiere
 
 
 --
--- TOC entry 3242 (class 2606 OID 33787)
+-- TOC entry 3246 (class 2606 OID 33787)
 -- Name: requisitos requisitos_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -566,7 +583,7 @@ ALTER TABLE ONLY public.requisitos
 
 
 --
--- TOC entry 3258 (class 2606 OID 34010)
+-- TOC entry 3262 (class 2606 OID 34010)
 -- Name: tiene tiene_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -575,7 +592,7 @@ ALTER TABLE ONLY public.tiene
 
 
 --
--- TOC entry 3254 (class 2606 OID 33957)
+-- TOC entry 3258 (class 2606 OID 33957)
 -- Name: trabajador_de_oficina trabajador_de_oficina_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -584,7 +601,7 @@ ALTER TABLE ONLY public.trabajador_de_oficina
 
 
 --
--- TOC entry 3252 (class 2606 OID 33939)
+-- TOC entry 3256 (class 2606 OID 33939)
 -- Name: trabajador trabajador_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -593,7 +610,7 @@ ALTER TABLE ONLY public.trabajador
 
 
 --
--- TOC entry 3244 (class 2606 OID 33992)
+-- TOC entry 3248 (class 2606 OID 33992)
 -- Name: trabajan trabajan_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -602,7 +619,7 @@ ALTER TABLE ONLY public.trabajan
 
 
 --
--- TOC entry 3246 (class 2606 OID 33795)
+-- TOC entry 3250 (class 2606 OID 33795)
 -- Name: usuario usuario_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -611,7 +628,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- TOC entry 3261 (class 2606 OID 33926)
+-- TOC entry 3265 (class 2606 OID 33926)
 -- Name: beneficios beneficios_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -620,16 +637,16 @@ ALTER TABLE ONLY public.beneficios
 
 
 --
--- TOC entry 3275 (class 2606 OID 33986)
+-- TOC entry 3279 (class 2606 OID 34047)
 -- Name: consultores_de_riesgo_y_fomento consultores_de_riesgo_y_fomento_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.consultores_de_riesgo_y_fomento
-    ADD CONSTRAINT consultores_de_riesgo_y_fomento_fk FOREIGN KEY (rut) REFERENCES public.trabajador(rut);
+    ADD CONSTRAINT consultores_de_riesgo_y_fomento_fk FOREIGN KEY (rut) REFERENCES public.trabajador(rut) ON DELETE CASCADE;
 
 
 --
--- TOC entry 3271 (class 2606 OID 33921)
+-- TOC entry 3275 (class 2606 OID 33921)
 -- Name: entrega entrega_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -638,7 +655,7 @@ ALTER TABLE ONLY public.entrega
 
 
 --
--- TOC entry 3267 (class 2606 OID 33861)
+-- TOC entry 3271 (class 2606 OID 33861)
 -- Name: trabajan fk_codigo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -647,25 +664,25 @@ ALTER TABLE ONLY public.trabajan
 
 
 --
--- TOC entry 3274 (class 2606 OID 33976)
+-- TOC entry 3277 (class 2606 OID 33976)
 -- Name: trabajador_de_oficina fk_rol; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.trabajador_de_oficina
-    ADD CONSTRAINT fk_rol FOREIGN KEY ("rolE") REFERENCES public.establecimiento(rol);
+    ADD CONSTRAINT fk_rol FOREIGN KEY (rol_e) REFERENCES public.establecimiento(rol);
 
 
 --
--- TOC entry 3273 (class 2606 OID 33963)
+-- TOC entry 3278 (class 2606 OID 34042)
 -- Name: trabajador_de_oficina fk_rut; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.trabajador_de_oficina
-    ADD CONSTRAINT fk_rut FOREIGN KEY (rut) REFERENCES public.trabajador(rut);
+    ADD CONSTRAINT fk_rut FOREIGN KEY (rut) REFERENCES public.trabajador(rut) ON DELETE CASCADE;
 
 
 --
--- TOC entry 3262 (class 2606 OID 33881)
+-- TOC entry 3266 (class 2606 OID 33881)
 -- Name: juridico juridico_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -674,7 +691,7 @@ ALTER TABLE ONLY public.juridico
 
 
 --
--- TOC entry 3263 (class 2606 OID 33876)
+-- TOC entry 3267 (class 2606 OID 33876)
 -- Name: natural natural_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -683,7 +700,7 @@ ALTER TABLE ONLY public."natural"
 
 
 --
--- TOC entry 3264 (class 2606 OID 33826)
+-- TOC entry 3268 (class 2606 OID 33826)
 -- Name: postula postula_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -692,7 +709,7 @@ ALTER TABLE ONLY public.postula
 
 
 --
--- TOC entry 3265 (class 2606 OID 33831)
+-- TOC entry 3269 (class 2606 OID 33831)
 -- Name: postula postula_fk_1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -701,7 +718,7 @@ ALTER TABLE ONLY public.postula
 
 
 --
--- TOC entry 3270 (class 2606 OID 33894)
+-- TOC entry 3274 (class 2606 OID 33894)
 -- Name: requiere requiere_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -710,7 +727,7 @@ ALTER TABLE ONLY public.requiere
 
 
 --
--- TOC entry 3266 (class 2606 OID 33904)
+-- TOC entry 3270 (class 2606 OID 33904)
 -- Name: requisitos requisitos_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -719,7 +736,7 @@ ALTER TABLE ONLY public.requisitos
 
 
 --
--- TOC entry 3276 (class 2606 OID 34018)
+-- TOC entry 3280 (class 2606 OID 34018)
 -- Name: tiene tiene_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -728,7 +745,7 @@ ALTER TABLE ONLY public.tiene
 
 
 --
--- TOC entry 3277 (class 2606 OID 34023)
+-- TOC entry 3281 (class 2606 OID 34023)
 -- Name: tiene tiene_fk_1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -737,16 +754,16 @@ ALTER TABLE ONLY public.tiene
 
 
 --
--- TOC entry 3272 (class 2606 OID 33946)
+-- TOC entry 3276 (class 2606 OID 34028)
 -- Name: trabajador trabajador_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.trabajador
-    ADD CONSTRAINT trabajador_fk FOREIGN KEY (rut) REFERENCES public.personal(rut);
+    ADD CONSTRAINT trabajador_fk FOREIGN KEY (rut) REFERENCES public.personal(rut) ON DELETE CASCADE;
 
 
 --
--- TOC entry 3268 (class 2606 OID 33999)
+-- TOC entry 3272 (class 2606 OID 33999)
 -- Name: trabajan trabajan_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -755,7 +772,7 @@ ALTER TABLE ONLY public.trabajan
 
 
 --
--- TOC entry 3269 (class 2606 OID 33866)
+-- TOC entry 3273 (class 2606 OID 33866)
 -- Name: usuario usuario_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -763,7 +780,7 @@ ALTER TABLE ONLY public.usuario
     ADD CONSTRAINT usuario_fk FOREIGN KEY (rut) REFERENCES public.personal(rut);
 
 
--- Completed on 2022-12-10 16:14:08
+-- Completed on 2022-12-11 17:24:38
 
 --
 -- PostgreSQL database dump complete
