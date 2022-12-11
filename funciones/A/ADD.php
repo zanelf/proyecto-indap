@@ -1,19 +1,19 @@
 <?php
-
-
-$clave = "mane"; //la clave del usuario
-
-$conexion = pg_connect("host= "localhost" dbname= "INDAP" port= "5432"
-user= "postgres" password= $clave");
+include  "../../conexion.php";  //base para agarrar la conexion general
 
 $rut = $_POST["rut"];
-$nombre = $_POST["nombre"];
-$id_indap = $_POST["id_indap"];
+$nombre = $_POST["nombre"]; 
 
-$sql = "insert into personal
-values ('.$id_indap.',' .$nombre.', .$rut.);";
+$sql = "INSERT INTO public.personal (nombre,rut)
+VALUES ('$nombre',$rut);";
 
-$insercion = pg_query($conexion,$sql);
+$insercion = pg_query($coneccion,$sql);
 
+if($insercion){
+   echo "bienvenido a indap, esperamos poder seguir trabajando con usted";
+}else{
+    echo "los valores que ah ingresado ya existen en la base de datos";
+}
+echo "<br><a href='../../index.html'>volver a la pagina anterior</a>";
 
 ?>

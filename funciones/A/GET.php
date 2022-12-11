@@ -1,23 +1,22 @@
 <?php
-include  "../../conexion.php";  //base que crea 
+include  "../../conexion.php";  //base para agarrar la conexion general
 
 $rut = $_POST["rut"];
 
-$sql = "select nombre, id_indap 
+$sql = "select nombre
 from personal  
 where rut = $rut;";
 
 $insercion = pg_query($coneccion,$sql);
-
-if (pg_num_rows($insercion) == 0) { //verifica si el valor existe
-    echo "por favor ingrese un valor valido <br><br>";
-    echo "<a href='../../index.html'>volver a la pagina anterior</a>";
-    exit;
-
-}else{
-    $ro = pg_fetch_array($insercion);
-     echo $ro["nombre"];
-
-}
+    // pg_num_rows($insercion) == 0 
+    if (!$insercion) { //verifica si el valor existe
+        echo "por favor ingrese un valor valido <br><br>";
+        echo "<a href='../../index.html'>volver a la pagina anterior</a>";
+    }else{
+        $ro = pg_fetch_array($insercion);
+        echo "la persona ";
+        echo $ro["nombre"];
+        echo " es un usuario de la plataforma INDAP";
+    }
 
 ?>
