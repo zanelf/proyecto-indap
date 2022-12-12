@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+       <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>INDAP</title>
+                <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="diseño.css" type="text/css">
+            </head>
+            
+            <body >
+                <h1> INDAP </h1>
+                <hr/>
+                <div id="principal" style="margin-left: 10%;">
+                    <div class="seccion">
+                        <h2>modificar Nombre</h2>
+                        <form action="funciones\personal\MOD_nombre.php" method="post">
+                            <p>RUT:<br><input type="text" name="rut" required></p>
+                            <p>nombre:<br> <input type="text" name="nombre"> </p>
+                            <br><br><br>
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                        </form>
+                    </div>
+
+                    <div class="seccion">
+                        <h2>agregar consultor</h2>
+                        <form action="funciones\personal\ADD_CRF.php" method="post">
+                            <p>RUT:<br><input type="text" name="rut" required></p>
+                            <p>Nombre:<br><input type="text" name="nombre"></p>
+                            <p>Correo:<br> <input type="text" name="correo"> </p>
+                            <br><br><br>
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                        </form>
+                    </div>
+
+                    <div class="seccion">
+                        <h2>agregar usuario</h2>
+                        <form action="funciones\personal\ADD_CRF.php" method="post">
+                            <p>RUT:<br><input type="text" name="rut" required></p>
+                            <p>Nombre:<br><input type="text" name="nombre"></p>
+                            <p>Correo:<br> <input type="text" name="correo"> </p>
+                            <br><br><br>
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                        </form>
+                    </div>
+                    <br><br>
+                    <a href="index.html">volver a la pagina de inicio</a>
+                </div>
+            </body>
+
+        </html>

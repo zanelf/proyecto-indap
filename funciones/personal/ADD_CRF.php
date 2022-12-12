@@ -4,7 +4,6 @@ include  "../../conexion.php";  //base para agarrar la conexion general
 $rut = $_POST["rut"];
 $nombre = $_POST["nombre"]; 
 $correo = $_POST["correo"];
-$role = $_POST["role"];
 
 
 $sql = "INSERT INTO public.personal (nombre,rut)
@@ -13,7 +12,7 @@ VALUES ('$nombre',$rut);
 insert into  public.trabajador (rut,correo_electronico)
 values ($rut,'$correo');
 
-insert into public.consultores_de_riesto_y_fomento (rut)
+insert into public.consultores_de_riesgo_y_fomento (rut)
 values ($rut);
 ";
 
