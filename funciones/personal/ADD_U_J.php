@@ -10,11 +10,20 @@ $comuna = $_POST["comuna"];
 $genero = $_POST["genero"];
 $date = $_POST["date"];
 
+$telefono = $_POST["telefono"];
+$direcion = $_POST["direccion"];
+$giro = $_POST["giro"];
+$razon = $_POST["razon"];
+$pais = $_POST["pais"];
+
 $sql = "INSERT INTO public.personal (nombre,rut)
 VALUES ('$nombre',$rut);
 
 INSERT INTO public.usuario (id, region, nacionalidad, comuna, sexo,fecha_de_nacimiento, rut)
 VALUES ($id, '$region', '$nacionalidad', '$comuna', '$genero', '$date',$rut);
+
+INSERT INTO public.juridico (id, telefono, region, pais, direccion, giro, razon_social)
+VALUES ($id,$telefono,'$region','$pais','$direcion',$giro,'$razon')
 ";
 
 $insercion = pg_query($coneccion,$sql);

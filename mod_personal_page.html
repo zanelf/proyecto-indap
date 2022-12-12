@@ -24,13 +24,31 @@
                     </div>
                     <br><hr>
                     <div class="seccion">
-                        <h2>modificar Correo</h2>
-                        <form action="funciones\personal\MOD_correo.php" method="post">
-                            <p>RUT:<br><input type="text" name="rut" required></p>
-                            <p>correo:<br> <input type="text" name="correo"> </p>
-                            <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
-                        </form>
+                        <h2>modificar trabajador o usuario (informacion basica)</h2>
+                        <div class="peticion">
+                            <h3>modificacion de correo</h3>
+                            <form action="funciones\personal\MOD_correo.php" method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <p>correo:<br> <input type="text" name="correo"> </p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>modificar usuario</h3>
+                            <form action="funciones\personal\MOD_u.php" method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <p>region:<br> <input type="text" name="region"> </p>
+                                <p>nacionalidad:<br> <input type="text" name="nacionalidad"> </p>
+                                <p>comuna:<br> <input type="text" name="comuna"> </p>
+                                <p>genero:<br> <input type="text" name="sexo"> </p>
+                                <p>fecha de nacimiento:<br> <input type="text" name="date"> </p>   
+                                
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+
                     </div>
                     <br><hr>
                     <div class="seccion">
@@ -47,7 +65,7 @@
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>aderir especialidad a algun usuario</h3>
+                            <h3>aderir especialidad a algun trabajador de oficina</h3>
                             <form action="funciones\especialidades\ADD_esp_rel.php" method="post">
                                 <p>Id:<br><input type="text" name="id" required></p>
                                 <p>rut:<br> <input type="text" name="rut"> </p>

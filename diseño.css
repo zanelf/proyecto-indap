@@ -21,4 +21,6 @@ em{font-size: 40px}
 
 .peticion div{
     margin: 5px;
+    border: 5px;
+    border-color: bisque;
 }
