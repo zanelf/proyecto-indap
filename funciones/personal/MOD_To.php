@@ -2,10 +2,10 @@
 include  "../../conexion.php";  //base para agarrar la conexion general
 
 $rut = $_POST["rut"];
-$nombre = $_POST["nombre"];
+$rol = $_POST["rol"];
 
-$sql = "UPDATE public.personal
-SET nombre='$nombre'
+$sql = "UPDATE public.trabajador_de_oficina
+SET rol_e='$rol'
 WHERE rut=$rut;";
 
 $insercion = pg_query($coneccion,$sql);

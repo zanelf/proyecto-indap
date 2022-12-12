@@ -1,12 +1,12 @@
 <?php
 include  "../../conexion.php";  //base para agarrar la conexion general
 
-$rut = $_POST["rut"];
+$id = $_POST["id"];
 $nombre = $_POST["nombre"];
+$descripcion = $_POST["descripcion"];
 
-$sql = "UPDATE public.personal
-SET nombre='$nombre'
-WHERE rut=$rut;";
+$sql = "INSERT INTO public.especialidades (id_especialidades,nombre,descripcion)
+VALUES ($id,'$nombre','$descripcion');";
 
 $insercion = pg_query($coneccion,$sql);
 
@@ -16,7 +16,7 @@ if($insercion){
     if(pg_num_rows($insercion) == 0){
         echo "ingrese un rut que exista";
     }else{
-        echo "se ah cambiado el nombre con exito";
+        echo "se ah cambiado el correo con exito";
     }
 }else{
     echo "el proceso a fallado, por favor ingrese un parametro valido";

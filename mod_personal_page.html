@@ -22,28 +22,51 @@
                             <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                         </form>
                     </div>
-
+                    <br><hr>
                     <div class="seccion">
-                        <h2>agregar consultor</h2>
-                        <form action="funciones\personal\ADD_CRF.php" method="post">
+                        <h2>modificar Correo</h2>
+                        <form action="funciones\personal\MOD_correo.php" method="post">
                             <p>RUT:<br><input type="text" name="rut" required></p>
-                            <p>Nombre:<br><input type="text" name="nombre"></p>
-                            <p>Correo:<br> <input type="text" name="correo"> </p>
+                            <p>correo:<br> <input type="text" name="correo"> </p>
+                            <br><br><br>
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                        </form>
+                    </div>
+                    <br><hr>
+                    <div class="seccion">
+                        <h2>especialidades</h2>
+                        <!-- agregar una seccion para modificar las especialidades, dejala simple y que modifique toda la fila -->
+                        <div class="peticion">
+                            <h3>agregar una especilidad posible</h3>
+                            <form action="funciones\especialidades\ADD_esp.php" method="post">
+                                <p>Id:<br><input type="text" name="id" required></p>
+                                <p>nombre:<br> <input type="text" name="nombre"> </p>
+                                <p>descripcion:<br> <input type="text" name="descripcion"> </p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>aderir especialidad a algun usuario</h3>
+                            <form action="funciones\especialidades\ADD_esp_rel.php" method="post">
+                                <p>Id:<br><input type="text" name="id" required></p>
+                                <p>rut:<br> <input type="text" name="rut"> </p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                    </div>
+                    <br><hr>
+                    <div class="seccion">
+                        <h2>modificar establecimiento de un usuario</h2>
+                        <form action="funciones\personal\MOD_to.php" method="post">
+                            <p>RUT:<br><input type="text" name="rut" required></p>
+                            <p>rol de establecimiento:<br> <input type="text" name="rol"> </p>
                             <br><br><br>
                             <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                         </form>
                     </div>
 
-                    <div class="seccion">
-                        <h2>agregar usuario</h2>
-                        <form action="funciones\personal\ADD_CRF.php" method="post">
-                            <p>RUT:<br><input type="text" name="rut" required></p>
-                            <p>Nombre:<br><input type="text" name="nombre"></p>
-                            <p>Correo:<br> <input type="text" name="correo"> </p>
-                            <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
-                        </form>
-                    </div>
                     <br><br>
                     <a href="index.html">volver a la pagina de inicio</a>
                 </div>
