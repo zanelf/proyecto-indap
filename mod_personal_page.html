@@ -73,6 +73,14 @@
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                             </form>
                         </div>
+                        <div class="peticion">
+                            <h3>elimminar especialidad</h3>
+                            <form action="funciones\especialidades\DEL_esp.php" method="post">
+                                <p>rol:<br><input type="text" name="rol" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
                     </div>
                     <br><hr>
                     <div class="seccion">
@@ -80,6 +88,24 @@
                         <form action="funciones\personal\MOD_to.php" method="post">
                             <p>RUT:<br><input type="text" name="rut" required></p>
                             <p>rol de establecimiento:<br> <input type="text" name="rol"> </p>
+                            <br><br><br>
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                        </form>
+                    </div>
+                    <br><hr>
+                    <div class="seccion">
+                        <h2>modificar un establecimiento</h2>
+                        <form action="funciones\establecimiento\MOD_e.php" method="post">
+                            <p>rol de establecimiento:<br> <input type="text" name="rol"> </p>
+                            <p>jefe de oficina:<br> <input type="text" name="jefe"> </p>
+                            <p>direccion:<br> <input type="text" name="direccion"> </p>
+                            <p>telefono:<br> <input type="text" name="telefono"> </p>
+                            <p>correo electronico:<br> <input type="text" name="correo"> </p>
+                            <br><select name="tipo">
+                                <option value ="direccion regional">direccion regional</option>
+                                <option value ="agencia de area">agencia de area</option>
+                                <option value ="oficina">oficina</option>
+                            </select>
                             <br><br><br>
                             <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                         </form>

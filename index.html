@@ -12,7 +12,9 @@
             <body>
                 <h1> INDAP </h1>
                 <hr/>
-                <div id="principal" style="margin-left: 10%;">
+                <p>Por favor ingrese un parametro que quiera agregar o seleccione alguna funcion particular</p><br><br> 
+                <hr/>               
+                <div id="principal" style="margin-left: 5%; margin-right: 5%;">
 
                     <div class = "seccion">
                         <h2>personal</h2>
@@ -42,11 +44,36 @@
                             <a href="mod_personal_page.html"> ir a la pagina de configuracion <br> de usuario </a>
                         </div>
                     </div>
-
+                    <hr/>      
                     <div class = "seccion">
                         <h2>Establecimiento</h2>
                         <div class="peticion">
-                            <h3>agregar</h3>
+                            <h3>agregar Establecimiento</h3>
+                            <form action="funciones\establecimiento\ADD_E.php" method="post">
+                                <p>Rol:<br><input type="text" name="rol" required></p>
+                                <p>jefe de oficina:<br><input type="text" name="jefeOficina" required></p>
+                                <p>direccion:<br><input type="text" name="direccion" required></p>
+                                <p>telefono:<br><input type="text" name="telefono" required></p>
+                                <p>correo electronico:<br><input type="text" name="correo" required></p>
+                                <br>
+                                <select name="tipo">
+                                    <option value ="direccion regional">direccion regional</option>
+                                    <option value ="agencia de area">agencia de area</option>
+                                    <option value ="oficina">oficina</option>
+                                </select>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>eliminar establecimiento</h3>
+                            <form action="funciones/establecimiento/DEL_E.php" method="post">
+                                <p>rol:<br><input type="text" name="rol" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+
+                            </form>
+
                         </div>
                     </div>
 
