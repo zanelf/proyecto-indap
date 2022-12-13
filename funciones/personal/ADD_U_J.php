@@ -22,8 +22,8 @@ VALUES ('$nombre',$rut);
 INSERT INTO public.usuario (id, region, nacionalidad, comuna, sexo,fecha_de_nacimiento, rut)
 VALUES ($id, '$region', '$nacionalidad', '$comuna', '$genero', '$date',$rut);
 
-INSERT INTO public.juridico (id, telefono, region, pais, direccion, giro, razon_social)
-VALUES ($id,$telefono,'$region','$pais','$direcion',$giro,'$razon')
+INSERT INTO public.juridico (id, telefono, pais, direccion, giro, razon_social)
+VALUES ($id,$telefono,'$pais','$direcion',$giro,'$razon')
 ";
 
 $insercion = pg_query($coneccion,$sql);

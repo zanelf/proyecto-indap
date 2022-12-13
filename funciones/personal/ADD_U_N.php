@@ -21,8 +21,8 @@ VALUES ('$nombre',$rut);
 INSERT INTO public.usuario (id, region, nacionalidad, comuna, sexo,fecha_de_nacimiento, rut)
 VALUES ($id, '$region', '$nacionalidad', '$comuna', '$genero', '$date',$rut);
 
-INSERT INTO public.natural (id,profesion,direccion,telefono,nacionalidad,fecha_de_nacimiento,emprendedor)
-	VALUES ($id,'$profesion','$direccion',$telefono,'$nacionalidad','$date','$emprendedor');
+INSERT INTO public.natural (id,profesion,direccion,telefono,emprendedor)
+	VALUES ($id,'$profesion','$direccion',$telefono,'$emprendedor');
 
 ";
 

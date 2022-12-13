@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+       <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>INDAP</title>
+                <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="diseño.css" type="text/css">
+            </head>
+            
+            <body>
+                <h1> INDAP </h1>
+                <hr/>
+                <p>Por favor ingrese un parametro que quiera agregar o seleccione alguna funcion particular</p><br><br> 
+                <p>Cada casilla corresponde a una accion en especifica, por como esta diseño el sistema no es posible activar mas de una instruccion simultaneamente</p>
+                <hr/>               
+                <div id="principal" style="margin-left: 5%; margin-right: 5%;">
+
+
+                    <div class="seccion">
+                        <h2>crear o eliminar programas</h2>
+                        <div class="peticion">
+                            <h3>crear programa</h3>
+                            <form action="funciones\programas\ADD_pr.php" method="post">
+                                <p>codigo:<br><input type="text" name="codigo" required></p>
+                                <p>alcance:<br><input type="text" name="alcance" required></p>
+                                <p>nombre:<br><input type="text" name="nombre" required></p>
+                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>eliminar programa</h3>
+                            <form action="funciones\programas\DEL_pr.php" method="post">
+                                <p>codigo:<br><input type="text" name="rol" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <br>
+                    </div>
+                    <br><hr><br>
+                    <div class="seccion">
+                        <h2> añadir requisitos y beenficios </h2>
+                        <div class="peticion">
+                            <h3>añadir un requisito posible</h3>
+                            <form action="funciones\programas\ADD_req.php" method="post">
+                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>añadir un beneficio posible</h3>
+                            <form action="funciones\programas\ADD_B.php" method="post">
+                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
+                                <p>que ayuda emite:<br><input type="text" name="ayuda" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                    </div>
+                    <br><hr><br>
+                    <div class="seccion">
+                        <h2>agregar beneficios y requisitos a programas</h2>
+                        <div class="peticion">
+                            <h3>agregar requisito</h3>
+                            <form action="funciones\programas\ADD_r.php" method="post">
+                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>codigo del programa:<br><input type="text" name="codigo" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>agregar beneficio</h3>
+                            <form action="funciones\programas\ADD_r.php" method="post">
+                                <p>codigo del beneficio:<br><input type="text" name="id" required></p>
+                                <p>codigo del programa:<br><input type="text" name="codigo" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <br><hr><br>
+                    <a href="index.html">volver a la pagina de inicio</a>
+
+                    
+                </div>
+            </body>
+
+        </html>
