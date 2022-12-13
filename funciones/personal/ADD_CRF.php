@@ -19,10 +19,10 @@ values ($rut);
 $insercion = pg_query($coneccion,$sql);
 
 if($insercion){
-   echo "bienvenido a indap, esperamos poder seguir trabajando con usted";
+    echo "Corredor de Riesgo y Fomento agregado exitosamente";
 }else{
-    echo "los valores que ah ingresado ya existen o son incorrectos en la base de datos en la base de datos";
+    echo "El corredor no pudo agregarse, revise que los parametros sean correctos";
 }
-echo "<br><br><a href='../../index.html'>volver a la pagina anterior</a>";
+echo "<br><a href='../../index.html'>volver a la pagina anterior</a>";
 
 ?>

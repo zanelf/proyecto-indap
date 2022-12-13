@@ -29,9 +29,9 @@ VALUES ($id,$telefono,'$region','$pais','$direcion',$giro,'$razon')
 $insercion = pg_query($coneccion,$sql);
 
 if($insercion){
-   echo "bienvenido a indap, esperamos poder seguir trabajando con usted";
+    echo "Usuario Juridico agregado exitosamente";
 }else{
-    echo "los valores que ah ingresado ya existen en la base de datos";
+    echo "El usuario no pudo agregarse, revise que los parametros sean correctos";
 }
 echo "<br><a href='../../index.html'>volver a la pagina de inicio</a>";
 

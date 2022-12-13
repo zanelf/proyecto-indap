@@ -10,9 +10,9 @@ $insercion = pg_query($coneccion,$sql);
 
 echo "<br>";
 if($insercion){
-    echo "el usuario a sido eliminado con exito <br> esperamos poder volver a trabajar con usted en el futuro";
+    echo "Eliminacion exitosa <br>";
 }else{
-    echo "el proceso a fallado, por favor ingrese un parametro valido";
+    echo "Eliminacion fallida, el rut ingresado no es valido";
 }
 
 echo "<br><br><a href='../../index.html'>volver a la pagina anterior</a>";
