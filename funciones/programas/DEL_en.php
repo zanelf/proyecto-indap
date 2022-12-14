@@ -2,13 +2,12 @@
 include  "../../conexion.php";  //base para agarrar la conexion general
 
 $id = $_POST["id"];
-$descripcion  = $_POST["codigo"];
+$codigo=$_POST["codigo"];
 
 
-$sql = "INSERT INTO public.entrega (codigo_beneficio, codigo)
-        VALUES ('$id','$descripcion');
+$sql = "DELETE FROM public.entrega
+        WHERE codigo_beneficio='$id' AND codigo='$codigo';
 ";
-
 $insercion = pg_query($coneccion,$sql);
 
 if($insercion){
@@ -19,3 +18,4 @@ if($insercion){
 echo "<br><br><a href='../../index.html'>volver a la pagina anterior</a>";
 
 ?>
+

@@ -8,6 +8,7 @@ $sql = "DELETE FROM public.programa
     WHERE codigo='$id';
 ";
 
+
 $insercion = pg_query($coneccion,$sql);
 
 if($insercion){

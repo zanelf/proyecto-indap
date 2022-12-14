@@ -1,13 +1,13 @@
 <?php
 include  "../../conexion.php";  //base para agarrar la conexion general
 
-$id = $_POST["id"];
-$descripcion  = $_POST["codigo"];
+$id = $_POST["cod"];
 
-
-$sql = "INSERT INTO public.entrega (codigo_beneficio, codigo)
-        VALUES ('$id','$descripcion');
+$sql = "DELETE FROM public.beneficios
+        WHERE codigo = '$id';
 ";
+
+
 
 $insercion = pg_query($coneccion,$sql);
 
