@@ -14,19 +14,18 @@
                 <hr/>
                 <div id="principal" style="margin-left: 10%;">
                     <div class="seccion">
-                        <h2>modificar Nombre</h2>
-                        <form action="funciones\personal\MOD_nombre.php" method="post">
-                            <p>RUT:<br><input type="text" name="rut" required></p>
-                            <p>nombre:<br> <input type="text" name="nombre"> </p>
-                            <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
-                        </form>
-                    </div>
-                    <br><hr>
-                    <div class="seccion">
-                        <h2>modificar trabajador o usuario (informacion basica)</h2>
+                        <h2>modificar miembros de personal</h2>
+                        <div class="'peticion">
+                            <h3>modificar Nombre del personal</h3>
+                            <form action="funciones\personal\MOD_nombre.php" method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <p>nombre:<br> <input type="text" name="nombre"> </p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
                         <div class="peticion">
-                            <h3>modificacion de correo</h3>
+                            <h3>modificacion de correo de un trabajador</h3>
                             <form action="funciones\personal\MOD_correo.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
                                 <p>correo:<br> <input type="text" name="correo"> </p>
@@ -39,7 +38,7 @@
                             <form action="funciones\personal\MOD_u.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
                                 <p>region:<br> <input type="text" name="region"> </p>
-                                <p>nacionalidad:<br> <input type="text" name="nacionalidad"> </p>
+                                <p>nacionalidad:<br> <input type="text" name="nacionalidad"> </p><br>
                                 <p>comuna:<br> <input type="text" name="comuna"> </p>
                                 <p>genero:<br> <input type="text" name="sexo"> </p>
                                 <p>fecha de nacimiento:<br> <input type="text" name="date"> </p>   
@@ -48,7 +47,6 @@
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                             </form>
                         </div>
-
                     </div>
                     <br><hr>
                     <div class="seccion">
@@ -73,10 +71,20 @@
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                             </form>
                         </div>
+                        <br>
                         <div class="peticion">
                             <h3>elimminar especialidad</h3>
-                            <form action="funciones\especialidades\DEL_esp.php" method="post">
+                            <form action="funciones\personal\DEL_ti.php" method="post">
                                 <p>rol:<br><input type="text" name="rol" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>eliminar alguna especialidad de un consultor</h3>
+                            <form action="funciones\personal\DEL_ti.php" method="post">
+                                <p>Id:<br><input type="text" name="id" required></p>
+                                <p>rut:<br> <input type="text" name="rut"> </p>
                                 <br><br><br>
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
                             </form>
