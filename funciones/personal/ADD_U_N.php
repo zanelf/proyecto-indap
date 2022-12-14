@@ -21,7 +21,7 @@ VALUES ('$nombre',$rut);
 INSERT INTO public.usuario (id, region, nacionalidad, comuna, sexo,fecha_de_nacimiento, rut)
 VALUES ($id, '$region', '$nacionalidad', '$comuna', '$genero', '$date',$rut);
 
-INSERT INTO public.natural (id,profesion,direccion,telefono,emprendedor)
+INSERT INTO public.natural (id,profesion,direccion,telefonotipo_,empren)
 	VALUES ($id,'$profesion','$direccion',$telefono,'$emprendedor');
 
 ";
