@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #797979;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 h1{
-    background-color: #ffffff;
+    background-color: #797979;
     padding: 0 0;
     color: #000000;
     text-align: center;
@@ -32,7 +32,7 @@ em{font-size: 40px}
     border-color:bisque;
 }
 h{
-    background-color: #ffffff;
+    background-color: #797979;
     color: #001C41;
     min-height: 200px;
 }
