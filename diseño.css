@@ -1,10 +1,17 @@
 body{
     background-color: rgb(255, 255, 255);
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1{
+    background-color: #ffffff;
+    padding: 0 0;
+    color: #000000;
     text-align: center;
+    position: relative;
+    line-height: 150%;
+    min-height: 69px;
+    max-height: 61px;
 }
 
 p{  font-size: 18px;  
@@ -13,7 +20,7 @@ p{  font-size: 18px;
     float:left;}
 em{font-size: 40px}
 
-.seccion div{
+.seccion div{ 
     display:inline-block;
     vertical-align:top;
     margin-left: 5px;
@@ -23,5 +30,10 @@ em{font-size: 40px}
 .peticion div{
     margin: 5px;
     border: 5px;
-    border-color: bisque;
+    border-color:bisque;
+}
+h{
+    background-color: #ffffff;
+    color: #001C41;
+    min-height: 200px;
 }
