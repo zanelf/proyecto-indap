@@ -14,113 +14,113 @@
                 <hr/>
                 <div id="principal" style="margin-left: 10%;">
                     <div class="seccion">
-                        <h2>modificar miembros de personal</h2>
+                        <h2>Modificar miembros de personal</h2>
                         <div class="'peticion">
-                            <h3>modificar Nombre del personal</h3>
+                            <h3>Modificar nombre del personal</h3>
                             <form action="funciones\personal\MOD_nombre.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
-                                <p>nombre:<br> <input type="text" name="nombre"> </p>
+                                <p>Nombre:<br> <input type="text" name="nombre"> </p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>modificacion de correo de un trabajador</h3>
+                            <h3>Modificacion de correo de un trabajador</h3>
                             <form action="funciones\personal\MOD_correo.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
-                                <p>correo:<br> <input type="text" name="correo"> </p>
+                                <p>Correo:<br> <input type="text" name="correo"> </p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>modificar usuario</h3>
+                            <h3>Modificar usuario</h3>
                             <form action="funciones\personal\MOD_u.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
-                                <p>region:<br> <input type="text" name="region"> </p>
-                                <p>nacionalidad:<br> <input type="text" name="nacionalidad"> </p><br>
-                                <p>comuna:<br> <input type="text" name="comuna"> </p>
-                                <p>genero:<br> <input type="text" name="sexo"> </p>
-                                <p>fecha de nacimiento:<br> <input type="text" name="date"> </p>   
+                                <p>Region:<br> <input type="text" name="region"> </p>
+                                <p>Nacionalidad:<br> <input type="text" name="nacionalidad"> </p><br>
+                                <p>Comuna:<br> <input type="text" name="comuna"> </p>
+                                <p>Genero:<br> <input type="text" name="sexo"> </p>
+                                <p>Fecha de nacimiento:<br> <input type="text" name="date"> </p>   
                                 
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
                     <br><hr>
                     <div class="seccion">
-                        <h2>especialidades</h2>
+                        <h2>Especialidades</h2>
                         <!-- agregar una seccion para modificar las especialidades, dejala simple y que modifique toda la fila -->
                         <div class="peticion">
-                            <h3>agregar una especilidad posible</h3>
+                            <h3>Agregar una especilidad posible</h3>
                             <form action="funciones\especialidades\ADD_esp.php" method="post">
                                 <p>Id:<br><input type="text" name="id" required></p>
-                                <p>nombre:<br> <input type="text" name="nombre"> </p>
-                                <p>descripcion:<br> <input type="text" name="descripcion"> </p>
+                                <p>Nombre:<br> <input type="text" name="nombre"> </p>
+                                <p>Descripcion:<br> <input type="text" name="descripcion"> </p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>aderir especialidad a algun trabajador de oficina</h3>
+                            <h3>Aderir especialidad a algun trabajador de oficina</h3>
                             <form action="funciones\especialidades\ADD_esp_rel.php" method="post">
                                 <p>Id:<br><input type="text" name="id" required></p>
-                                <p>rut:<br> <input type="text" name="rut"> </p>
+                                <p>Rut:<br> <input type="text" name="rut"> </p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <br>
                         <div class="peticion">
-                            <h3>elimminar especialidad</h3>
+                            <h3>Elimminar especialidad</h3>
                             <form action="funciones\personal\DEL_ti.php" method="post">
-                                <p>rol:<br><input type="text" name="rol" required></p>
+                                <p>Rol:<br><input type="text" name="rol" required></p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>eliminar alguna especialidad de un consultor</h3>
+                            <h3>Eliminar alguna especialidad de un consultor</h3>
                             <form action="funciones\personal\DEL_ti.php" method="post">
                                 <p>Id:<br><input type="text" name="id" required></p>
-                                <p>rut:<br> <input type="text" name="rut"> </p>
+                                <p>Rut:<br> <input type="text" name="rut"> </p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
                     <br><hr>
                     <div class="seccion">
-                        <h2>modificar establecimiento de un usuario</h2>
+                        <h2>Modificar establecimiento de un usuario</h2>
                         <form action="funciones\personal\MOD_to.php" method="post">
                             <p>RUT:<br><input type="text" name="rut" required></p>
-                            <p>rol de establecimiento:<br> <input type="text" name="rol"> </p>
+                            <p>Rol de establecimiento:<br> <input type="text" name="rol"> </p>
                             <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                         </form>
                     </div>
                     <br><hr>
                     <div class="seccion">
-                        <h2>modificar un establecimiento</h2>
+                        <h2>Modificar un establecimiento</h2>
                         <form action="funciones\establecimiento\MOD_e.php" method="post">
-                            <p>rol de establecimiento:<br> <input type="text" name="rol"> </p>
-                            <p>jefe de oficina:<br> <input type="text" name="jefe"> </p>
-                            <p>direccion:<br> <input type="text" name="direccion"> </p>
-                            <p>telefono:<br> <input type="text" name="telefono"> </p>
-                            <p>correo electronico:<br> <input type="text" name="correo"> </p>
+                            <p>Rol de establecimiento:<br> <input type="text" name="rol"> </p>
+                            <p>Jefe de oficina:<br> <input type="text" name="jefe"> </p>
+                            <p>Direccion:<br> <input type="text" name="direccion"> </p>
+                            <p>Telefono:<br> <input type="text" name="telefono"> </p>
+                            <p>Correo electronico:<br> <input type="text" name="correo"> </p>
                             <br><select name="tipo">
-                                <option value ="direccion regional">direccion regional</option>
-                                <option value ="agencia de area">agencia de area</option>
-                                <option value ="oficina">oficina</option>
+                                <option value ="direccion regional">Direccion regional</option>
+                                <option value ="agencia de area">Agencia de area</option>
+                                <option value ="oficina">Oficina</option>
                             </select>
                             <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                         </form>
                     </div>
 
                     <br><br>
-                    <a href="index.html">volver a la pagina de inicio</a>
+                    <a href="index.html">Volver a la pagina de inicio</a>
                 </div>
             </body>
 
