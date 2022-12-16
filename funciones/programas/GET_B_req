@@ -1,0 +1,22 @@
+<?php
+include  "../../conexion.php";  //base para agarrar la conexion general
+
+$rut = $_POST["codigo"];
+
+$sql = "SELECT nombre 
+from programa  
+where codigo = $codigo;";
+
+$insercion = pg_query($coneccion,$sql);
+    // pg_num_rows($insercion) == 0 
+    if (!$insercion) { //verifica si el valor existe
+        echo "Por favor ingrese un codigo valido <br><br>";
+        echo "<a href='../../index.html'>volver a la pagina anterior</a>";
+    }else{
+        $ro = pg_fetch_array($insercion);
+        echo "El programa ";
+        echo $ro["nombre"];
+        echo " Tiene los siguientes requisitos y benefecios"; // y aqui se colocan los requisitos y benefecios que posee ek programa
+    }
+
+?>
