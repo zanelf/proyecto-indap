@@ -20,28 +20,12 @@
                 <hr/>               
                 <div id="principal" style="margin-left: 5%; margin-right: 5%;">
 
-                    <div class = "seccion">
+                    <div class = "seccion" id="personal">
                         <h2>Personal</h2>
-                        <div class="peticion">
-                            <h3>Preguntar por personal</h3>
-                            <form action="funciones\personal\GET.php " method="post">
-                                <p>RUT:<br><input type="text" name="rut" required></p>
-                                <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
-                            </form>
-                        </div>
-                        <div class="peticion">
-                            <h3>Eliminar personal</h3>
-                            <form action="funciones\personal\DEL.php" method="post">
-                                <p>RUT:<br><input type="text" name="rut" required></p>
-                                <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
-                            </form>
-                        </div>
-                        
+        
                         <div class="peticion">
                             <h3>Añadir nuevo usuario</h3>
-                            <a href="add_personal_page.html"> Dirigirse a la pagina de <br>creacion de usuario </a>
+                            <a href="add_personal_page.html"> Dirigirse a la pagina de <br>creacion y eliminacion de usuario </a>
                         </div>
                         <div class="peticion">
                             <h3>Modificar usuario</h3>
@@ -49,6 +33,11 @@
                         </div>
                     </div>
                     <hr/>      
+                    <div class = "seccion">
+                        <h2>consultas</h2>
+                        <a href="mostrar.html">consultas de todo tipo en este enlace</a>
+                    </div>
+                    <hr>
                     <div class = "seccion">
                         <h2>Establecimiento</h2>
                         <div class="peticion">
@@ -79,39 +68,69 @@
                             </form>
                         </div>
                     </div>
-                    <hr/>    
 
-                    <div class = "seccion">
-                        <div class= "peticion">
-                            
+                    <hr>    
+                    <div class = "seccion" id= "programas">
+                        <h2>seccion de programas</h2>
+                        <a href="programas.html">acceso a la seccion de consulta, eliminacion y <br>creacion de programas, requisitos y beneficios</a>
+                        
+                    </div>
+                    <br><hr><br>
+
+                    <div class= "seccion" id="uniones">
+                        <h2>postulaciones a programas </h2>
+                        <div class = "peticion">
+                            <h3>postular a un programa</h3>
+                            <form action="funciones/uniones/ADD_pos.php" method="post">
+                                <p>codigo del programa:<br>
+                                    <input type="text" name="codigo" required></p>
+                                    <p>id del usuario:<br>
+                                        <input type="text" name="id" required></p>
+                                    <p>fecha:<br>
+                                        <input type="text" name="fecha" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class = "peticion">
+                            <h3>eliminar una postulacion</h3>
+                            <form action="funciones/uniones/DEL_pos.php" method="post">
+                                <p>codigo:<br>
+                                    <input type="text" name="codigo" required></p>
+                                    <p>id:<br>
+                                        <input type="text" name="id" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
                         </div>
 
                     </div>
 
-                    <br><hr><br>
-                    <div class = "seccion">
-<<<<<<< Updated upstream
-                        <h2>Seccion de programas</h2>
-                        <a href="programas.html">Acceso a la seccion de consulta, Eliminacion y creacion de programas, Requisitos y beneficios</a>
-=======
-                        <h2>seccion de programas</h2>
-                        <a href="programas.html">acceso a la seccion de consulta, eliminacion y <br>creacion de programas, requisitos y beneficios</a>
->>>>>>> Stashed changes
-                        <br><br><br><br>
-                    </div>
 
-                    <div calss= "seccion" >
-                        <h2>postular a un programa</h2>
-                        <form action="funciones/establecimiento/DEL_E.php" method="post">
-                            <p>codigo:<br>
-                                <input type="text" name="codigo" required></p>
-                                <p>id:<br>
-                                    <input type="text" name="id" required></p>
-                                <p>ayuda:<br>
-                                    <input type="text" name="ayuda" required></p>
-                            <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
-                        </form>
+                    <div calss= "seccion" id="uniones">
+                        <h2>trabajos y sus empleados</h2>
+                        <div class = "peticion">
+                            <h3>agregar un empleado a un trabajo</h3>
+                            <form action="funciones/uniones/ADD_tr.php" method="post">
+                                <p>rut:<br>
+                                    <input type="text" name="rut" required></p>
+                                <p>codigo:<br>
+                                    <input type="text" name="codigo" required></p>                                
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
+                        <div class = "peticion">
+                            <h3>eliminar un empleado de un trabajo</h3>
+                            <form action="funciones/uniones/DEL_tr.php" method="post">
+                                <p>rut:<br>
+                                    <input type="text" name="rut" required></p>
+                                <p>codigo:<br>
+                                    <input type="text" name="codigo" required></p>                                
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            </form>
+                        </div>
 
                     </div>
                 </div>

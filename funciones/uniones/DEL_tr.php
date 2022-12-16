@@ -1,12 +1,12 @@
 <?php
 include  "../../conexion.php";  //base para agarrar la conexion general
 
-$id = $_POST["id"];
+$rut = $_POST["rut"];
 $codigo = $_POST["codigo"];
-$date = $_POST["date"];
 
-$sql = "INSERT INTO public.postula (codigo,id,fecha)
-VALUES ('$codigo',$id,'$date');";
+$sql = "DELETE from public.trabajan
+where rut = $rut
+and codigo = '$codigo';";
 
 $insercion = pg_query($coneccion,$sql);
 
@@ -24,4 +24,4 @@ if($insercion){
 
 echo "<br><br><a href='../../index.html'>volver a la pagina de inicio</a>";
 
-?>
+?>s

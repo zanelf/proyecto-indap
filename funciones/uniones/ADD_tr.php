@@ -1,12 +1,12 @@
 <?php
 include  "../../conexion.php";  //base para agarrar la conexion general
 
-$id = $_POST["id"];
+$rut = $_POST["rut"];
 $codigo = $_POST["codigo"];
-$date = $_POST["date"];
 
-$sql = "INSERT INTO public.postula (codigo,id,fecha)
-VALUES ('$codigo',$id,'$date');";
+$sql = "INSERT INTO public.trabajan (rut, codigo)
+VALUES ($rut,'$codigo');";
+
 
 $insercion = pg_query($coneccion,$sql);
 
