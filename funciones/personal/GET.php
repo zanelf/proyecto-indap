@@ -18,5 +18,7 @@ $insercion = pg_query($coneccion,$sql);
         echo $ro["nombre"];
         echo " es un usuario de la plataforma INDAP";
     }
+    
+    echo "<br><br><a href='../../index.html'>volver a la pagina de inicio</a>";
 
 ?>
