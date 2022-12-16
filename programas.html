@@ -10,138 +10,141 @@
             </head>
             
             <body>
-                <h1> INDAP </h1>
+                <h><img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-ministerio-de-agricultura.png"> </h>
+                <h1> <img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-indap.png" alt="INDAP"> </h1>
                 <hr/>
                 <p>Por favor ingrese un parametro que quiera agregar o seleccione alguna funcion particular</p><br><br> 
                 <p>Cada casilla corresponde a una accion en especifica, por como esta diseño el sistema no es posible activar mas de una instruccion simultaneamente</p>
+                <br>
+                <br>
                 <hr/>               
                 <div id="principal" style="margin-left: 5%; margin-right: 5%;">
 
 
                     <div class="seccion">
-                        <h2>crear o eliminar programas</h2>
+                        <h2>Crear o eliminar programas</h2>
                         <div class="peticion">
-                            <h3>crear programa</h3>
+                            <h3>Crear programa</h3>
                             <form action="funciones\programas\ADD_pr.php" method="post">
-                                <p>codigo:<br><input type="text" name="codigo" required></p>
-                                <p>alcance:<br><input type="text" name="alcance" required></p><br><br>
-                                <p>nombre:<br><input type="text" name="nombre" required></p>
-                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
+                                <p>Codigo:<br><input type="text" name="codigo" required></p>
+                                <p>Alcance:<br><input type="text" name="alcance" required></p><br><br>
+                                <p>Nombre:<br><input type="text" name="nombre" required></p>
+                                <p>Descripcion:<br><input type="text" name="descripcion" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>modificar un programa</h3>
+                            <h3>Modificar un programa</h3>
                             <form action="funciones\programas\MOD_pr.php" method="post">
-                                <p>codigo:<br><input type="text" name="codigo" required></p>
-                                <p>alcance:<br><input type="text" name="alcance" required></p><br><br>
-                                <p>nombre:<br><input type="text" name="nombre" required></p>
-                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
+                                <p>Codigo:<br><input type="text" name="codigo" required></p>
+                                <p>Alcance:<br><input type="text" name="alcance" required></p><br><br>
+                                <p>Nombre:<br><input type="text" name="nombre" required></p>
+                                <p>Descripcion:<br><input type="text" name="descripcion" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>eliminar programa</h3>
+                            <h3>Eliminar programa</h3>
                             <form action="funciones\programas\DEL_pr.php" method="post">
-                                <p>codigo:<br><input type="text" name="rol" required></p>
+                                <p>Codigo:<br><input type="text" name="rol" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <br>
                     </div>
                     <br><hr><br>
                     <div class="seccion">
-                        <h2> añadir requisitos y beenficios </h2>
+                        <h2> Añadir requisitos y benficios </h2>
                         <div class="peticion">
-                            <h3>añadir un requisito posible</h3>
+                            <h3>Añadir un requisito posible</h3>
                             <form action="funciones\programas\ADD_req.php" method="post">
-                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
-                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
+                                <p>Identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>Descripcion:<br><input type="text" name="descripcion" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>añadir un beneficio posible</h3>
+                            <h3>Añadir un beneficio posible</h3>
                             <form action="funciones\programas\ADD_B.php" method="post">
-                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
-                                <p>descripcion:<br><input type="text" name="descripcion" required></p>
-                                <p>que ayuda emite:<br><input type="text" name="ayuda" required></p>
+                                <p>Identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>Descripcion:<br><input type="text" name="descripcion" required></p>
+                                <p>Que ayuda emite:<br><input type="text" name="ayuda" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
                     <br><hr><br>
                     <div class="seccion">
-                        <h2>agregar beneficios y requisitos a programas</h2>
+                        <h2>Agregar beneficios y requisitos a programas</h2>
                         <div class="peticion">
-                            <h3>agregar requisito</h3>
+                            <h3>Agregar requisito</h3>
                             <form action="funciones\programas\ADD_r.php" method="post">
-                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
-                                <p>codigo del programa:<br><input type="text" name="codigo" required></p>
+                                <p>Identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>Codigo del programa:<br><input type="text" name="codigo" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>agregar beneficio</h3>
+                            <h3>Agregar beneficio</h3>
                             <form action="funciones\programas\ADD_en.php" method="post">
-                                <p>codigo del beneficio:<br><input type="text" name="id" required></p>
-                                <p>codigo del programa:<br><input type="text" name="codigo" required></p>
+                                <p>Codigo del beneficio:<br><input type="text" name="id" required></p>
+                                <p>Codigo del programa:<br><input type="text" name="codigo" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
                     <br><hr><br>
                     <div class="seccion">
-                        <h2>eliminar requisitos y beneficios de un programa</h2>
+                        <h2>Eliminar requisitos y beneficios de un programa</h2>
                         <div class="peticion">
-                            <h3>eliminar requisito</h3>
+                            <h3>Eliminar requisito</h3>
                             <form action="funciones\programas\DEL_r.php" method="post">
-                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
-                                <p>codigo del programa:<br><input type="text" name="codigo" required></p>
+                                <p>Identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>Codigo del programa:<br><input type="text" name="codigo" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>agregar beneficio</h3>
+                            <h3>Agregar beneficio</h3>
                             <form action="funciones\programas\DEL_en.php" method="post">
-                                <p>codigo del beneficio:<br><input type="text" name="id" required></p>
-                                <p>codigo del programa:<br><input type="text" name="codigo" required></p>
+                                <p>Codigo del beneficio:<br><input type="text" name="id" required></p>
+                                <p>Codigo del programa:<br><input type="text" name="codigo" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
                     <br><hr><br>
                     <div class="seccion">
-                        <h2>eliminar requisitos y beneficios</h2>
+                        <h2>Eliminar requisitos y beneficios</h2>
                         <div class="peticion">
-                            <h3>eliminar requisito</h3>
+                            <h3>Eliminar requisito</h3>
                             <form action="funciones\programas\DEL_req.php" method="post">
-                                <p>identificador del requisito:<br><input type="text" name="id" required></p>
+                                <p>Identificador del requisito:<br><input type="text" name="id" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>agregar beneficio</h3>
+                            <h3>Agregar beneficio</h3>
                             <form action="funciones\programas\DEL_b.php" method="post">
-                                <p>codigo del beneficio:<br><input type="text" name="cod" required></p>
+                                <p>Codigo del beneficio:<br><input type="text" name="cod" required></p>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
 
                     <br><hr><br>
-                    <a href="index.html">volver a la pagina de inicio</a>
+                    <a href="index.html">Volver a la pagina de inicio</a>
 
                     
                 </div>

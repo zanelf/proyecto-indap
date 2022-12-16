@@ -10,69 +10,72 @@
             </head>
             
             <body>
-                <h1> INDAP </h1>
+                <h><img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-ministerio-de-agricultura.png"> </h>
+                <h1> <img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-indap.png" alt="INDAP"> </h1>
                 <hr/>
                 <p>Por favor ingrese un parametro que quiera agregar o seleccione alguna funcion particular</p><br><br> 
                 <p>Cada casilla corresponde a una accion en especifica, por como esta diseño el sistema no es posible activar mas de una instruccion simultaneamente</p>
+                <br>
+                <br>
                 <hr/>               
                 <div id="principal" style="margin-left: 5%; margin-right: 5%;">
 
                     <div class = "seccion">
-                        <h2>personal</h2>
+                        <h2>Personal</h2>
                         <div class="peticion">
                             <h3>Preguntar por personal</h3>
                             <form action="funciones\personal\GET.php " method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>eliminar personal</h3>
+                            <h3>Eliminar personal</h3>
                             <form action="funciones\personal\DEL.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         
                         <div class="peticion">
-                            <h3>añadir nuevo usuario</h3>
-                            <a href="add_personal_page.html"> ir a la pagina de <br>creacion de usuario </a>
+                            <h3>Añadir nuevo usuario</h3>
+                            <a href="add_personal_page.html"> Dirigirse a la pagina de <br>creacion de usuario </a>
                         </div>
                         <div class="peticion">
-                            <h3>modificar usuario</h3>
-                            <a href="mod_personal_page.html"> ir a la pagina de configuracion <br> de usuario </a>
+                            <h3>Modificar usuario</h3>
+                            <a href="mod_personal_page.html"> Dirigirse a la pagina de configuracion <br> de usuario </a>
                         </div>
                     </div>
                     <hr/>      
                     <div class = "seccion">
                         <h2>Establecimiento</h2>
                         <div class="peticion">
-                            <h3>agregar Establecimiento</h3>
+                            <h3>Agregar Establecimiento</h3>
                             <form action="funciones\establecimiento\ADD_E.php" method="post">
                                 <p>Rol:<br><input type="text" name="rol" required></p>
-                                <p>jefe de oficina:<br><input type="text" name="jefeOficina" required></p>
-                                <p>direccion:<br><input type="text" name="direccion" required></p>
+                                <p>Jefe de oficina:<br><input type="text" name="jefeOficina" required></p>
+                                <p>Direccion:<br><input type="text" name="direccion" required></p>
                                 <br>
-                                <p>telefono:<br><input type="text" name="telefono" required></p>
-                                <p>correo electronico:<br><input type="text" name="correo" required></p>
+                                <p>Telefono:<br><input type="text" name="telefono" required></p>
+                                <p>Correo electronico:<br><input type="text" name="correo" required></p>
                                 <br><br><br>
                                 <select name="tipo">
-                                    <option value ="direccion regional">direccion regional</option>
-                                    <option value ="agencia de area">agencia de area</option>
-                                    <option value ="oficina">oficina</option>
+                                    <option value ="direccion regional">Direccion regional</option>
+                                    <option value ="agencia de area">Agencia de area</option>
+                                    <option value ="oficina">Oficina</option>
                                 </select>
                                 <br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                         <div class="peticion">
-                            <h3>eliminar establecimiento</h3>
+                            <h3>Eliminar establecimiento</h3>
                             <form action="funciones/establecimiento/DEL_E.php" method="post">
-                                <p>rol:<br><input type="text" name="rol" required></p>
+                                <p>Rol:<br><input type="text" name="rol" required></p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
@@ -80,8 +83,8 @@
 
                     <br><hr><br>
                     <div class = "seccion">
-                        <h2>seccion de programas</h2>
-                        <a href="programas.html">acceso a la seccion de consulta, eliminacion y creacion de programas, requisitos y beneficios</a>
+                        <h2>Seccion de programas</h2>
+                        <a href="programas.html">Acceso a la seccion de consulta, Eliminacion y creacion de programas, Requisitos y beneficios</a>
                         <br><br><br><br>
                     </div>
                 </div>

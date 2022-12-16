@@ -10,92 +10,93 @@
             </head>
             
             <body >
-                <h1> INDAP </h1>
+                <h><img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-ministerio-de-agricultura.png"> </h>
+                <h1> <img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-indap.png" alt="INDAP"> </h1>
                 <hr/>
                 <div id="principal" style="margin-left: 10%;">
                     <div class="seccion">
-                        <h2>agregar trabajador oficina</h2>
+                        <h2>Agregar trabajador oficina</h2>
                         <form action="funciones\personal\ADD_To.php" method="post">
                             <p>RUT:<br><input type="text" name="rut" required></p>
                             <p>Nombre:<br><input type="text" name="nombre"></p>
                             <p>Correo:<br> <input type="text" name="correo"> </p>
-                            <p>rol establecimiento<br> <input type="text" name="role"></p>
+                            <p>Rol establecimiento<br> <input type="text" name="role"></p>
                             <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                         </form>
                     </div>
             <hr>
                     <div class="seccion">
-                        <h2>agregar consultor</h2>
+                        <h2>Agregar consultor</h2>
                         <form action="funciones\personal\ADD_CRF.php" method="post">
                             <p>RUT:<br><input type="text" name="rut" required></p>
                             <p>Nombre:<br><input type="text" name="nombre"></p>
                             <p>Correo:<br> <input type="text" name="correo"> </p>
                             <br><br><br>
-                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                         </form>
                     </div>
             <hr>
                     <div class="seccion">
-                        <h2>agregar usuarios</h2>
+                        <h2>Agregar usuarios</h2>
 
                         <div class="peticion">
-                            <h3>agregar usuario juridico</h3>
+                            <h3>Agregar usuario juridico</h3>
                             <form action="funciones\personal\ADD_U_J.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
-                                <p>nombre:<br><input type="text" name="nombre"></p>
-                                <p>id:<br><input type="text" name="id"></p>
-                                <p>region:<br> <input type="text" name="region"> </p>
-                                <p>nacionalidad:<br><input type="text" name="nacionalidad"></p>
-                                <p>comuna:<br> <input type="text" name="comuna"> </p>
-                                <p>genero:<br><input type="text" name="genero"></p>
-                                <p>fecha de nacimiento (aaaa/mm/dd):<br><input type="text" name="date"></p>
+                                <p>Nombre:<br><input type="text" name="nombre"></p>
+                                <p>Id:<br><input type="text" name="id"></p>
+                                <p>Region:<br> <input type="text" name="region"> </p>
+                                <p>Nacionalidad:<br><input type="text" name="nacionalidad"></p>
+                                <p>Comuna:<br> <input type="text" name="comuna"> </p>
+                                <p>Genero:<br><input type="text" name="genero"></p>
+                                <p>Fecha de nacimiento (aaaa/mm/dd):<br><input type="text" name="date"></p>
                                 <br><br><br><br><br><br>
                                 
-                                <p>telefono:<br><input type="text" name="telefono"></p>
-                                <p>direccion:<br><input type="text" name="direccion"></p>
-                                <p>pais:<br><input type="text" name="pais"></p>
-                                <p>giro:<br><input type="text" name="giro"></p>
-                                <p>razon social:<br><input type="text" name="razon"></p>
+                                <p>Telefono:<br><input type="text" name="telefono"></p>
+                                <p>Direccion:<br><input type="text" name="direccion"></p>
+                                <p>Pais:<br><input type="text" name="pais"></p>
+                                <p>Giro:<br><input type="text" name="giro"></p>
+                                <p>Razon social:<br><input type="text" name="razon"></p>
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
 
                         <div class="peticion" > 
-                            <h3>agregar usuario natural</h3>
+                            <h3>Agregar usuario natural</h3>
                             <form action="funciones\personal\ADD_U_N.php" method="post">
                                 <p>RUT:<br><input type="text" name="rut" required></p>
-                                <p>nombre:<br><input type="text" name="nombre"></p>
-                                <p>id:<br><input type="text" name="id"></p>
-                                <p>region:<br> <input type="text" name="region"> </p>
-                                <p>nacionalidad:<br><input type="text" name="nacionalidad"></p>
-                                <p>comuna:<br> <input type="text" name="comuna"> </p>
-                                <p>genero:<br><input type="text" name="genero"></p>
-                                <p>fecha de nacimiento (aaaa/mm/dd):<br><input type="text" name="date"></p>
+                                <p>Nombre:<br><input type="text" name="nombre"></p>
+                                <p>Id:<br><input type="text" name="id"></p>
+                                <p>Region:<br> <input type="text" name="region"> </p>
+                                <p>Nacionalidad:<br><input type="text" name="nacionalidad"></p>
+                                <p>Comuna:<br> <input type="text" name="comuna"> </p>
+                                <p>Genero:<br><input type="text" name="genero"></p>
+                                <p>Fecha de nacimiento (aaaa/mm/dd):<br><input type="text" name="date"></p>
                                 <br><br><br><br><br><br>
                                 
-                                <p>telefono:<br><input type="text" name="telefono"></p>
+                                <p>Telefono:<br><input type="text" name="telefono"></p>
                                 
-                                <p>direccion:<br><input type="text" name="direccion"></p>
-                                <p>profesion:<br><input type="text" name="profesion"></p>
-                                <p>tipo de emprendedor:<br>
+                                <p>Direccion:<br><input type="text" name="direccion"></p>
+                                <p>Profesion:<br><input type="text" name="profesion"></p>
+                                <p>Tipo de emprendedor:<br>
                                     <select name="emprendedor">
-                                        <option value ="campesino">campesino</option>
-                                        <option value ="pequeño productor">pequeño productor</option>
+                                        <option value ="campesino">Campesino</option>
+                                        <option value ="pequeño productor">Pequeño productor</option>
                                     </select>
                                 </p>
 
 
 
                                 <br><br><br>
-                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="anular">
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
                     </div>
                 </div>
                     <br><br>
-                    <a href="index.html">volver a la pagina de inicio</a>
+                    <a href="index.html">Volver a la pagina de inicio</a>
                 </div>
             </body>
 
