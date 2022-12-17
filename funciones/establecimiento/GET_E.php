@@ -3,7 +3,7 @@ include  "../../conexion.php";  //base para agarrar la conexion general
 
 $rol = $_POST["rol"];
 
-$sql = "SELECT direccion
+$sql = "SELECT *
 from establecimiento
 where rol = $rol;";
 
