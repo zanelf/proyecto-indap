@@ -19,6 +19,26 @@
                 <hr/>
                 <div id="principal" style="margin-left: 10%;">
                     <div class="seccion">
+                        <h2>Consultar por Usuarios o Trabajadores</h2>
+                        <div class="'peticion">
+                            <h3>Consultar por Usuario</h3>
+                            <form action="funciones\personal\GET_U.php" method="post">
+                                <p>ID:<br><input type="text" name="id" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>Consultar por Trabajador</h3>
+                            <form action="funciones\personal\GET_To.php" method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                    </div>
+                    <br><hr>
+                    <div class="seccion">
                         <h2>Modificar miembros de personal</h2>
                         <div class="'peticion">
                             <h3>Modificar nombre del personal</h3>
