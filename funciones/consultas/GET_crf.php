@@ -3,12 +3,11 @@ include  "../../conexion.php";  //base para agarrar la conexion general
 
 $rut = $_POST["rut"];
 
-$sql = "SELECT p.rut, p.nombre, t.correo_electronico, tdo.rol_e, e.direccion 
-from personal p, trabajador t, trabajador_de_oficina tdo, establecimiento e 
+$sql = "SELECT p.*, t.correo_electronico
+from personal p, trabajador t, consultores_de_riesgo_y_fomento crf
 where p.rut = $rut
-and t.rut = p.rut
-and t.rut = tdo.rut 
-and tdo.rol_e = e.rol;";
+and p.rut = t.rut  
+and t.rut = crf.rut,";
 
 $insercion = pg_query($coneccion,$sql);
 
@@ -22,8 +21,12 @@ echo "<br>";
         echo $ro["nombre"];
         echo ": <br><br> Correo electronico: ";
         echo $ro["correo_electronico"];
-        echo "<br> direccion de trabajo: ";
-        echo $ro["direccion"];
+        echo "<br><hr><br>especialidades";
+        
+        $sql = "
+        
+        ";
+    
     }
 
 echo "<br><br><a href='../../index.html'>volver a la pagina de inicio</a>";

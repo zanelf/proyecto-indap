@@ -14,6 +14,7 @@
                 <h1> <img src="https://www.indap.gob.cl/themes/custom/indap/assets/img/logo-indap.png" alt="INDAP"> </h1>
                 <hr/>
                 <div id="principal" style="margin-left: 10%;">
+                    <div class = "seccion">
                         <div class="peticion">
                             <h3>Preguntar por personal</h3>
                             <form action="funciones\personal\GET.php " method="post">
@@ -22,7 +23,8 @@
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
-                        <hr>
+                        <br>
+                    <div class="seccion">
                         <div class="peticion">
                             <h3>Preguntar por trabajador de oficina</h3>
                             <form action="funciones\consultas\GET_to.php " method="post">
@@ -31,11 +33,36 @@
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
                         </div>
-                        <hr>
-
-
-
-                </div>
+                    </div>
+                    <div class="peticion">
+                        <h3>Preguntar por consultor de riesgo y fomento</h3>
+                        <form action="funciones\consultas\GET_crf.php " method="post">
+                            <p>RUT:<br><input type="text" name="rut" required></p>
+                            <br><br><br>
+                            <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                        </form>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class = "seccion">
+                        <div class="peticion">
+                            <h3>Preguntar por usuario natural</h3>
+                            <form action="funciones\consultas\GET_u_n.php " method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>Preguntar por usuario judicial</h3>
+                            <form action="funciones\consultas\GET_u_n.php " method="post">
+                                <p>RUT:<br><input type="text" name="rut" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                    </div>
+    
                 
                     <br><br>
                     <a href="index.html">Volver a la pagina de inicio</a>
