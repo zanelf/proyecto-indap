@@ -67,13 +67,25 @@
                     <div class="seccion">
                         <div class="peticion">
                             <h3>Preguntar por el establecimiento</h3>
-                            <form action="funciones\personal\GET.php " method="post">
+                            <form action="funciones\establecimiento\GET_E.php " method="post">
                                 <p>Rol:<br><input type="text" name="rol" required></p>
                                 <br><br><br>
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
 
                         </div>
+                    </div>
+
+                    <div class="seccion">
+                        <div class="peticion">
+                            <h3>a que programa puedes acceder</h3>
+                            <form action="funciones\establecimiento\GET_ejE.php " method="post">
+                                <p>id:<br><input type="text" name="id" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+
                     </div>
 
                 
