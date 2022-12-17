@@ -22,7 +22,15 @@
 
 
                     <div class="seccion">
-                        <h2>Crear o eliminar programas</h2>
+                        <h2>Crear, consultar o eliminar programas</h2>
+                        <div class="peticion">
+                            <h3>Preguntar por Programa</h3>
+                            <form action="funciones\programas\GET_pr.php " method="post">
+                                <p>Rol:<br><input type="text" name="codigo" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
                         <div class="peticion">
                             <h3>Crear programa</h3>
                             <form action="funciones\programas\ADD_pr.php" method="post">
@@ -137,6 +145,34 @@
                             <h3>Agregar beneficio</h3>
                             <form action="funciones\programas\DEL_b.php" method="post">
                                 <p>Codigo del beneficio:<br><input type="text" name="cod" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                    </div>
+                    <br><hr><br>
+                    <div class="seccion">
+                        <h2>Consultar Beneficios y Requisitos</h2>
+                        <div class="peticion">
+                            <h3>Consultar Beneficio y programas que lo poseen</h3>
+                            <form action="funciones\programas\GET_b.php" method="post">
+                                <p>Codigo del beneficio:<br><input type="text" name="cod" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>Consultar Requisito y programas que lo poseen</h3>
+                            <form action="funciones\programas\GET_req.php" method="post">
+                                <p>Identificador del requisito:<br><input type="text" name="id" required></p>
+                                <br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
+                            <h3>Consultar Beneficios y Requesitos de un Programa</h3>
+                            <form action="funciones\programas\GET_B_req.php" method="post">
+                                <p>Codigo del beneficio:<br><input type="text" name="codigo" required></p>
                                 <br><br>
                                 <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
                             </form>
