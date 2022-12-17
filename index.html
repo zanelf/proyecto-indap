@@ -41,6 +41,14 @@
                     <div class = "seccion">
                         <h2>Establecimiento</h2>
                         <div class="peticion">
+                            <h3>Preguntar por Establecimiento</h3>
+                            <form action="funciones\establecimiento\GET_E.php " method="post">
+                                <p>Rol:<br><input type="text" name="rol" required></p>
+                                <br><br><br>
+                                <input type="submit" value="Enviar" style="margin-right: 5px;"><input type="reset" value="Anular">
+                            </form>
+                        </div>
+                        <div class="peticion">
                             <h3>Agregar Establecimiento</h3>
                             <form action="funciones\establecimiento\ADD_E.php" method="post">
                                 <p>Rol:<br><input type="text" name="rol" required></p>
